@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SendStickerToFriendsActivity">
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_name_string"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/emojiAngry"
+            app:layout_constraintEnd_toStartOf="@id/send_to"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/send_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_emoji_to"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/emojiConfused"
+            app:layout_constraintEnd_toStartOf="@id/friend_spinner"
+            app:layout_constraintStart_toEndOf="@id/userName"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/friend_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/send_to"
+            app:layout_constraintTop_toTopOf="@+id/send_to" />
+
+        <ImageView
+            android:id="@+id/emojiAngry"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/angry"
+            app:layout_constraintEnd_toStartOf="@id/emojiConfused"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/friend_spinner" />
+
+        <ImageView
+            android:id="@+id/emojiConfused"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/confused"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/emojiAngry"
+            app:layout_constraintTop_toBottomOf="@id/friend_spinner" />
+
+        <ImageView
+            android:id="@+id/emojiHeartBreak"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/heartbreak"
+            app:layout_constraintEnd_toStartOf="@id/emojiSad"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emojiAngrySentCountTV"
+            tools:layout_editor_absoluteX="80dp" />
+
+        <ImageView
+            android:id="@+id/emojiSad"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/sad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toEndOf="@+id/emojiHeartBreak"
+            app:layout_constraintTop_toBottomOf="@+id/emojiConfusedSentCountTV" />
+
+
+        <ImageView
+            android:id="@+id/emojiSleepy"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/sleepy"
+            app:layout_constraintEnd_toStartOf="@+id/emojiNaughty"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emojiHeartBreakSentCountTV" />
+
+        <ImageView
+            android:id="@+id/emojiNaughty"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/naughty"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/emojiSleepy"
+            app:layout_constraintTop_toBottomOf="@+id/emojiSadSentCountTV"
+            tools:layout_editor_absoluteX="246dp" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="onSendButtonPressed"
+            android:text="@string/sendButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emojiNaughtySentCountTV" />
+
+        <Button
+            android:id="@+id/receivedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="onReceivedButtonPressed"
+            android:text="@string/received_history_string"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sendButton" />
+
+        <TextView
+            android:id="@+id/emojiAngrySentCountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/count_sent_string"
+            app:layout_constraintBottom_toTopOf="@+id/emojiHeartBreak"
+            app:layout_constraintStart_toStartOf="@+id/emojiAngry"
+            app:layout_constraintTop_toBottomOf="@id/emojiAngry" />
+
+        <TextView
+            android:id="@+id/emojiConfusedSentCountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/count_sent_string"
+            app:layout_constraintStart_toEndOf="@id/emojiAngrySentCountTV"
+            app:layout_constraintStart_toStartOf="@+id/emojiConfused"
+            app:layout_constraintTop_toBottomOf="@id/emojiConfused" />
+
+        <TextView
+            android:id="@+id/emojiHeartBreakSentCountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/count_sent_string"
+            app:layout_constraintBottom_toTopOf="@id/emojiSleepy"
+            app:layout_constraintStart_toEndOf="@id/emojiConfusedSentCountTV"
+            app:layout_constraintStart_toStartOf="@+id/emojiHeartBreak"
+            app:layout_constraintTop_toBottomOf="@+id/emojiHeartBreak"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/emojiSadSentCountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/count_sent_string"
+            app:layout_constraintStart_toStartOf="@+id/emojiSad"
+            app:layout_constraintTop_toBottomOf="@+id/emojiSad" />
+
+        <TextView
+            android:id="@+id/emojiSleepySentCountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/count_sent_string"
+            app:layout_constraintStart_toStartOf="@+id/emojiSleepy"
+            app:layout_constraintTop_toBottomOf="@+id/emojiSleepy" />
+
+        <TextView
+            android:id="@+id/emojiNaughtySentCountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/count_sent_string"
+            app:layout_constraintStart_toStartOf="@+id/emojiNaughty"
+            app:layout_constraintTop_toBottomOf="@+id/emojiNaughty" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

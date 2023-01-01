@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/receivedEmojiIV"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="50dp"
+        android:contentDescription="@string/Emojis_string"
+        android:gravity="center_vertical"
+        android:src="@android:drawable/stat_sys_warning" />
+
+    <TextView
+        android:id="@+id/senderTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toEndOf="@id/receivedEmojiIV"
+        android:gravity="center_vertical"
+        android:minWidth="100dp"
+        android:text="@string/from_user_string"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/sendTimeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toEndOf="@id/senderTV"
+        android:gravity="center_vertical"
+        android:text="@string/send_time_string"
+        android:textColor="@color/black" />
+</RelativeLayout>

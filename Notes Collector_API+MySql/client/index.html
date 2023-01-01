@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link type="text/css" rel="stylesheet" href="./base.css" />
+  <link type="text/css" rel="stylesheet" href="./index.css" />
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <!-- <h1 style=" text-align: left;">
+  </h1> -->
+  <header class="header">
+    <h1 class="main-title" style="text-align: center;">Save Your Notes</h1>
+  </header>
+
+  <div class="note-form-wrapper">
+    <div>
+      <label for="title">Title: </label>
+      <input type="text" name="title" id="title" required />
+    </div>
+    <div>
+      <label for="title">Note: </label>
+      <textarea id="note" name="note" rows="5" cols="50" required></textarea>
+    </div>
+    <div>
+      <input type="submit" id="submit" value="Save" />
+    </div>
+    <!-- </form> -->
+  </div>
+  <div class="notes-list-wrapper" id="msg">
+  </div>
+</body>
+<script>
+  $(document).ready(function () {
+    $.ajax({
+      type: 'post',
+      url: '/getData',
+      dataType: 'json',
+      success: function (data) {
+        var str = ''
+        for (var index = 0; index < data['msg'].length; index++) {
+          str += '<ul class="notes-list">' + data['msg'][index]['title'] + '<a style="float:right" href = "javascript:void(0)" onClick ="showDetails(' + data['msg'][index]['id'] + ')" ">details</a><a style="float:right;color:red" href = "javascript:void(0)" onClick ="deleteItem(' + data['msg'][index]['id'] + ')">delete||</a></ul>'
+        }
+        $("#msg").html(str);
+      },
+      error: function (error) {
+        console.log(error)
+      }
+    })
+  });
+
+  $('#submit').click(function () {
+    var title = $('#title').val();
+    var note = $('#note').val();
+    if (title.length == 0) {
+      alert('Please enter title');
+      return;
+    }
+    if (note.length == 0) {
+      alert('Please enter content');
+      return;
+    }
+    $.ajax({
+      type: 'post',
+      url: '/addData',
+      dataType: 'json',
+      data: { title: title, note: note },
+      success: function (data) {
+        location.href = "/"
+      },
+      error: function (error) {
+        console.log(error)
+      }
+    })
+  })
+
+
+  function showDetails(id) {
+    location.href = "showDetails?id=" + id;
+  }
+
+  function deleteItem(id) {
+    if (confirm("Are you sure you want to delete this message?")) {
+      var deleteItem = id;
+      $.ajax({
+        type: 'post',
+        url: '/deleteItem',
+        dataType: 'json',
+        data: { id: id },
+        success: function (data) {
+          location.href = "/"
+        },
+        error: function (error) {
+          console.log(error)
+        }
+      })
+    }
+  }
+</script>
+
+</html>

@@ -1,0 +1,325 @@
+html {
+  font-size: 75%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FEFBF6;
+  margin: 0%;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main';
+  grid-template-columns: 1fr;
+  grid-template-rows: 10rem 1fr 5rem;
+  height: 100%;
+}
+
+header {
+  grid-area: header;
+  background-color: #54BAB9;
+  height: fit-content;
+}
+
+main {
+  grid-area: main;
+}
+
+.intro-container {
+  margin: 5% 0;
+  text-align: center;
+}
+
+.intro {
+  width: 50%;
+  margin: auto;
+}
+
+hr {
+  border: dotted #DFBB9D 5px;
+  border-bottom: none;
+  border-width: 5px;
+  margin: 50px auto;
+  width: 30%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  padding: 1rem 0;
+}
+
+header h1 {
+  color: #F7ECDE;
+  padding: auto;
+  font-size: 2.5rem;
+  font-family: cursive;
+  font-weight: bolder;
+  margin-left: 10px;
+}
+
+.intro h1 {
+  color: #18978F;
+  padding: auto;
+}
+
+.intro p {
+  padding: auto;
+  text-align: left;
+}
+
+.shop-img {
+  max-width: 50rem;
+  width: 100%;
+  border-radius: 2%;
+}
+
+.product-display h1 {
+  color: #18978F;
+  padding: auto;
+}
+
+h2 {
+  color: #7D5A50;
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  font-weight: normal;
+  padding: 10px;
+}
+
+h2:hover {
+  color: #8FE3CF;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #8FE3CF;
+}
+
+header a {
+  color: #F7ECDE;
+  padding: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+img {
+  border-radius: 0.5rem;
+}
+
+.medium {
+  max-width: 25rem;
+  max-height: 30rem;
+  width: 100%;
+}
+
+.small {
+  max-width: 20rem;
+  max-height: 25rem;
+  width: 100%;
+}
+
+.card {
+  border: 0.1rem #E9DAC1 solid;
+  background-color: #F7ECDE;
+  border-radius: 0.5rem;
+  margin: 5rem;
+}
+
+.brand {
+  font-size: 5rem;
+  margin-left: 2%;
+  font-family: cursive;
+  font-weight: bolder;
+}
+
+.copyright-container{
+    font-style: normal;
+    margin: 10px 20px;
+    text-decoration: none;
+    padding: 40px 0 50px;
+    background-color: #54BAB9;
+}
+
+.footer-links {
+  color: #F7ECDE;
+  padding: 50px 20px ;
+}
+
+.copyright {
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 30px 0;
+}
+
+/* start styling here */
+.row.top {
+  align-items: flex-start;
+}
+
+.col-1 {
+  flex: 1 1 25rem;
+}
+
+.col-2 {
+  flex: 2;
+  align-content: center;
+  /* 1 1 25rem; */
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  margin-top: 1rem;
+}
+
+/* set sign in page form style */
+.form {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.form>div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.form label {
+  margin: 1rem 0;
+}
+
+button {
+  padding: 0.4rem;
+  margin: 0.4rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid;
+  font-size: 1.5rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #C1EFFF;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8FE3CF;
+  border: 0.1rem #404040 solid;
+}
+
+button.block {
+  width: 100%;
+}
+
+.card-body>* {
+  margin-bottom: 00.5rem;
+}
+
+img.large {
+  width: 40%;
+}
+
+.price {
+  font-size: 2rem;
+}
+
+.success {
+  background-color: #59CE8F;
+}
+
+.danger {
+  background-color: #FF7C7C;
+}
+
+.dropdown {
+  flex: 1;
+  padding: 2%;
+  margin: 2%;
+}
+
+#root {
+  height: 100%;
+}
+
+
+
+/* Tablet */
+@media (min-width: 550px) and (max-width: 760px) {
+  .small {
+    max-width: 20rem;
+    max-height: 25rem;
+    width: 100%;
+  }
+
+  .productDetail {
+    font-size: 1.75rem;
+  }
+
+  img.large {
+    width: 90%;
+  }
+
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+  .intro-container {
+    padding-top : 30px;
+  }
+
+  .small {
+    max-width: 20rem;
+    max-height: 25rem;
+    width: 100%;
+  }
+
+  .productDetail {
+    font-size: 1.5rem;
+  }
+
+  .productCard {
+    padding-top: 50px;
+  }
+
+  img.large {
+    padding-top: 10rem;
+    width: 90%;
+  }
+
+  .cartTitle {
+    padding-top: 50px;
+  }
+
+  .card-body {
+    padding-top: 30px;
+    border: 0.1rem #E9DAC1 solid;
+    background-color: #F7ECDE;
+    border-radius: 0.5rem;
+    margin: 5rem;
+  }
+
+  .intro {
+    padding-top: 50px;
+  }
+}

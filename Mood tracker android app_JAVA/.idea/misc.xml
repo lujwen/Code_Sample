@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/selector.xml" value="0.128" />
+        <entry key="app/src/main/res/layout/activity_fimage1.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_fimage2.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_fimage3.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_fimage4.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_fimage5.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_fimage_happylist.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_flogin1.xml" value="0.1403242147922999" />
+        <entry key="app/src/main/res/layout/activity_fm0_happy.xml" value="0.16847826086956522" />
+        <entry key="app/src/main/res/layout/activity_fm1_angry.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_fm2_sad.xml" value="0.1947463768115942" />
+        <entry key="app/src/main/res/layout/activity_fm3_hysterical.xml" value="0.1947463768115942" />
+        <entry key="app/src/main/res/layout/activity_fm4_embarrased.xml" value="0.1947463768115942" />
+        <entry key="app/src/main/res/layout/activity_fm5_fatigued.xml" value="0.1947463768115942" />
+        <entry key="app/src/main/res/layout/activity_fmemory.xml" value="0.26927083333333335" />
+        <entry key="app/src/main/res/layout/activity_fmemoryimage.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_fmood_summary.xml" value="0.28854166666666664" />
+        <entry key="app/src/main/res/layout/activity_fmoods.xml" value="0.21428571428571427" />
+        <entry key="app/src/main/res/layout/activity_freceive_emoji.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_frowmodel.xml" value="0.1403242147922999" />
+        <entry key="app/src/main/res/layout/activity_fsend_emoji.xml" value="0.10218978102189781" />
+        <entry key="app/src/main/res/layout/activity_fsignup.xml" value="0.1403242147922999" />
+        <entry key="app/src/main/res/layout/activity_fupload1.xml" value="0.1403242147922999" />
+        <entry key="app/src/main/res/layout/activity_fupload2.xml" value="0.1403242147922999" />
+        <entry key="app/src/main/res/layout/activity_fupload3.xml" value="0.1403242147922999" />
+        <entry key="app/src/main/res/layout/activity_fupload5.xml" value="0.1403242147922999" />
+        <entry key="app/src/main/res/layout/activity_fupload_act_happy.xml" value="0.1403242147922999" />
+        <entry key="app/src/main/res/layout/activity_fwelcome.xml" value="0.1403242147922999" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.18070652173913043" />
+        <entry key="app/src/main/res/layout/activity_send_emoji.xml" value="0.20244565217391305" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

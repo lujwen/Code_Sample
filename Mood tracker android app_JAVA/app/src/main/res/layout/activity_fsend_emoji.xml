@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    tools:context=".FSendEmoji">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="50dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".FSendEmoji">
+
+            <TextView
+                android:id="@+id/txtLa"
+                android:layout_width="116dp"
+                android:layout_height="49dp"
+                android:text=""
+                android:textColor="@color/green"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.054"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.058" />
+
+            <TextView
+                android:id="@+id/txtLo"
+                android:layout_width="142dp"
+                android:layout_height="48dp"
+                android:text=""
+                android:textColor="@color/green"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.919"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.059" />
+
+            <TextView
+                android:id="@+id/selectFriend"
+                android:layout_width="184dp"
+                android:layout_height="53dp"
+                android:text="Share with a friend"
+                android:textColor="@color/green"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.07"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.146" />
+
+            <TextView
+                android:id="@+id/moodReceiver"
+                android:layout_width="114dp"
+                android:layout_height="45dp"
+                android:text="Mood"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/txtLaReceiver"
+                android:layout_width="156dp"
+                android:layout_height="44dp"
+                android:text="Latitude"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/txtLoReceiver"
+                android:layout_width="156dp"
+                android:layout_height="49dp"
+                android:text=""
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="115dp"
+                android:layout_height="50dp"
+                android:text="@string/user_name_string"
+                android:textColor="@color/green"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toTopOf="@id/emojiAngry"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.439"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.327" />
+
+            <Spinner
+                android:id="@+id/ffriend_spinner"
+                android:layout_width="140dp"
+                android:layout_height="49dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/green"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.988"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.144" />
+
+            <ImageView
+                android:id="@+id/emojiAngry"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/dance"
+                app:layout_constraintEnd_toStartOf="@id/emojiConfused"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ffriend_spinner" />
+
+            <ImageView
+                android:id="@+id/emojiConfused"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/yoga"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/emojiAngry"
+                app:layout_constraintTop_toBottomOf="@id/ffriend_spinner" />
+
+            <ImageView
+                android:id="@+id/emojiHeartBreak"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/shop"
+                app:layout_constraintEnd_toStartOf="@id/emojiSad"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emojiAngrySentCountTV"
+                tools:layout_editor_absoluteX="80dp" />
+
+            <ImageView
+                android:id="@+id/emojiSad"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/swim"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toEndOf="@+id/emojiHeartBreak"
+                app:layout_constraintTop_toBottomOf="@+id/emojiConfusedSentCountTV" />
+
+
+            <ImageView
+                android:id="@+id/emojiSleepy"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/read"
+                app:layout_constraintEnd_toStartOf="@+id/emojiNaughty"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emojiHeartBreakSentCountTV" />
+
+            <ImageView
+                android:id="@+id/emojiNaughty"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/sun"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/emojiSleepy"
+                app:layout_constraintTop_toBottomOf="@+id/emojiSadSentCountTV"
+                tools:layout_editor_absoluteX="246dp" />
+
+            <Button
+                android:id="@+id/sendButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:onClick="onSendButtonPressed"
+                android:text="Send Message"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emojiNaughtySentCountTV" />
+
+            <Button
+                android:id="@+id/receivedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:onClick="onReceivedButtonPressed"
+                android:text="Received History "
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sendButton" />
+
+            <TextView
+                android:id="@+id/emojiAngrySentCountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text=""
+                app:layout_constraintBottom_toTopOf="@+id/emojiHeartBreak"
+                app:layout_constraintStart_toStartOf="@+id/emojiAngry"
+                app:layout_constraintTop_toBottomOf="@id/emojiAngry" />
+
+            <TextView
+                android:id="@+id/emojiConfusedSentCountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="    "
+                app:layout_constraintStart_toEndOf="@id/emojiAngrySentCountTV"
+                app:layout_constraintStart_toStartOf="@+id/emojiConfused"
+                app:layout_constraintTop_toBottomOf="@id/emojiConfused" />
+
+            <TextView
+                android:id="@+id/emojiHeartBreakSentCountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="    "
+                app:layout_constraintBottom_toTopOf="@id/emojiSleepy"
+                app:layout_constraintStart_toEndOf="@id/emojiConfusedSentCountTV"
+                app:layout_constraintStart_toStartOf="@+id/emojiHeartBreak"
+                app:layout_constraintTop_toBottomOf="@+id/emojiHeartBreak"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/emojiSadSentCountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="    "
+                app:layout_constraintStart_toStartOf="@+id/emojiSad"
+                app:layout_constraintTop_toBottomOf="@+id/emojiSad" />
+
+            <TextView
+                android:id="@+id/emojiSleepySentCountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="    "
+                app:layout_constraintStart_toStartOf="@+id/emojiSleepy"
+                app:layout_constraintTop_toBottomOf="@+id/emojiSleepy" />
+
+            <TextView
+                android:id="@+id/emojiNaughtySentCountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="    "
+                app:layout_constraintStart_toStartOf="@+id/emojiNaughty"
+                app:layout_constraintTop_toBottomOf="@+id/emojiNaughty" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:itemBackground="@color/common_google_signin_btn_text_dark_default"
+        app:menu="@menu/bottom_nav_menu"
+        />
+
+</RelativeLayout>

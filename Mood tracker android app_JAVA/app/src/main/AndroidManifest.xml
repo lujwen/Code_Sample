@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="edu.northeastern.mobileapplicationteam18">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGE_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_team18"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_team18_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MobileApplicationTeam18"
+        tools:targetApi="31">
+        <activity
+            android:name=".FMoodSummary"
+            android:exported="false" />
+
+<!--        <activity-->
+<!--            android:name=".FMoodAnalysis"-->
+<!--            android:exported="false" />-->
+        <activity
+            android:name=".FReceiveEmoji"
+            android:exported="false" />
+        <activity
+            android:name=".FSendEmoji"
+            android:exported="false" />
+        <activity
+            android:name=".FMemoryimage"
+            android:exported="false" />
+        <activity
+            android:name=".FMemory"
+            android:exported="false" />
+        <activity
+            android:name=".FUpload5"
+            android:exported="false" />
+        <activity
+            android:name=".FImage5"
+            android:exported="false" />
+        <activity
+            android:name=".FUpload4"
+            android:exported="false" />
+        <activity
+            android:name=".FImage4"
+            android:exported="false" />
+        <activity
+            android:name=".FUpload3"
+            android:exported="false" />
+        <activity
+            android:name=".FImage3"
+            android:exported="false" />
+        <activity
+            android:name=".FUpload2"
+            android:exported="false" />
+        <activity
+            android:name=".FImage2"
+            android:exported="false" />
+        <activity
+            android:name=".FUpload1"
+            android:exported="false" />
+        <activity
+            android:name=".FImage1"
+            android:exported="false" />
+        <activity
+            android:name=".FHappyActivityList"
+            android:exported="false" />
+        <activity
+            android:name=".FM0happy"
+            android:exported="false" />
+        <activity
+            android:name=".FM1Angry"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".FM2Sad"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".FM3Hysterical"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".FM4Embarrassed"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".FM5Fatigued"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".FMoods"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".FLogin"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".FSignup"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".FUploadActivityHappy"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+
+        <service
+            android:name=".Firebase"
+            android:exported="false"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".ReceivedEmojiRecords"
+            android:exported="false" />
+        <activity
+            android:name=".SentEmojiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Mood"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".About"
+            android:exported="false" />
+        <activity
+            android:name=".Realtime"
+            android:exported="false" />
+        <activity
+            android:name=".Weather"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/channel_id" />
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="true" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
